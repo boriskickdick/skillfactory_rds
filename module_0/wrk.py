@@ -7,9 +7,9 @@ def game_core_v2(number):
     while number != predict:
         count+=1
         if number > predict: 
-            predict += 1
+            predict += 5
         elif number < predict: 
-            predict -= 1
+            predict -= 4
     return(count) # выход из цикла, если угадали
         
         
