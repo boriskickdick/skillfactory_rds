@@ -8,24 +8,33 @@ def game_core_v2(number):
     predict = np.random.randint(1, 100)
     while number != predict:
         count += 1
-        if number > predict + 25:
+        if number >= predict + 25:
             predict += 25
-        elif number > predict + 20:
+        elif number >= predict + 20:
             predict += 20
-        elif number > predict + 10:
+        elif number >= predict + 15:
+            predict += 15           
+        elif number >= predict + 10:
             predict += 10
-        elif number > predict + 5:
+        elif number >= predict + 5:
             predict += 5
-        elif number > predict:
+        elif number >= predict + 3:
+            predict += 3
+        elif number >= predict:
             predict += 1
-        elif number + 25 < predict:
+
+        elif number + 25 <= predict:
             predict -= 25
-        elif number + 20 < predict:
+        elif number + 20 <= predict:
             predict -= 20
-        elif number + 10 < predict:
+        elif number + 15 <= predict:
+            predict -= 15    
+        elif number + 10 <= predict:
             predict -= 10
-        elif number + 5 < predict:
+        elif number + 5 <= predict:
             predict -= 5
+        elif number + 3 <= predict:
+            predict -= 3
         elif number < predict:
             predict -= 1
 
